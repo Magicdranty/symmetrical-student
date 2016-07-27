@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item   android:state_pressed="true">
+
+
+        <ripple android:color="#f73586ef"
+            android:radius="5dp">
+
+        </ripple>
+
+
+    </item>
+
+    <item>
+        <shape  android:shape="rectangle" >
+            <gradient
+                android:angle="90"
+                android:centerColor="#f73586ef"
+                android:endColor="#7898ff"
+                android:startColor="#7898ff"/>
+
+
+
+
+        </shape>
+
+    </item>
+
+</selector>

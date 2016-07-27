@@ -1,6 +1,7 @@
 package com.example.jimmy.student;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -17,13 +18,17 @@ public class list extends AppCompatActivity {
     DrawerLayout drawerLayout;
 
     NavigationView view;
-
+    Typeface typeFace;//設定字型
+    String[] Textname = {"fonts/ARDESTINE.ttf","fonts/ARBERKLEY.ttf",
+            "fonts/segoesc.ttf","fonts/segoescb.ttf","fonts/MTCORSVA.TTF",
+            "fonts/BrushScriptStd.otf"};//設定字型
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ///
         view = (NavigationView) findViewById(R.id.navigation_view);
@@ -54,7 +59,7 @@ public class list extends AppCompatActivity {
                 return true;
             }
         });
-        ////以下是更新帳戶名
+        ////以下是更新帳戶名s
         if (view.getHeaderCount() > 0) {
             View header = view.getHeaderView(0);
             TextView tv = (TextView) header.findViewById(R.id.textView2);

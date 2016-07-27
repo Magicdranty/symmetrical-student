@@ -1,6 +1,8 @@
 package com.example.jimmy.student;
 
+import android.app.ActionBar;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -9,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,16 +22,27 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity {
     TextView tv;
     EditText acc, pwd;
-
+    Button bt;
+    Typeface typeFace;//設定字型
+    String[] Textname = {"fonts/ARDESTINE.ttf","fonts/ARBERKLEY.ttf",
+            "fonts/segoesc.ttf","fonts/segoescb.ttf","fonts/MTCORSVA.TTF",
+            "fonts/BrushScriptStd.otf"};//設定字型
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tv = (TextView) findViewById(R.id.textView);
+        typeFace = Typeface.createFromAsset(getAssets(),Textname[5]);   //設定字型
+        tv = (TextView) findViewById(R.id.textView); //設定字型
         acc = (EditText) findViewById(R.id.editText);
         pwd = (EditText) findViewById(R.id.e2);
+        bt = (Button) findViewById(R.id.button);
+        bt.setTypeface(typeFace);   //設定字型
+        tv.setTypeface(typeFace);   //設定字型
+
+
     }
     public void login(View v) {
+        Log.e("123","qwqwq");
         Thread thread = new Thread() {
             Bundle bundle = new Bundle();
             Message msg = new Message();
