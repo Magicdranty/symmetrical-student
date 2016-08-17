@@ -14,5 +14,11 @@
     <string name="title_activity_startanimate">startanimate</string>
     <string name="title_activity_inrace">inrace</string>
     <string name="title_activity_ranking">ranking</string>
+    <string name="title_activity_settings">settings</string>
 
+
+    <string-array name="theme_array">
+        <item>Basic_style</item>
+        <item>blue</item>
+    </string-array>
 </resources>

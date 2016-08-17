@@ -1,7 +1,9 @@
 package com.example.jimmy.student;
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -27,9 +29,16 @@ public class MainActivity extends AppCompatActivity {
     String[] Textname = {"fonts/ARDESTINE.ttf","fonts/ARBERKLEY.ttf",
             "fonts/segoesc.ttf","fonts/segoescb.ttf","fonts/MTCORSVA.TTF",
             "fonts/BrushScriptStd.otf"};//設定字型
+    public static final String KEY = "com.my.package.app";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //===========================================================
+        SharedPreferences settings = getApplication().getSharedPreferences(KEY, Context.MODE_PRIVATE);
+        Utils.change_sTheme(settings.getInt("THEMES",0));
+        connectuse.currentPosition = settings.getInt("THEMES",0);
+        //===========================================================
+        Utils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_main);
         typeFace = Typeface.createFromAsset(getAssets(),Textname[5]);   //設定字型
         tv = (TextView) findViewById(R.id.textView); //設定字型

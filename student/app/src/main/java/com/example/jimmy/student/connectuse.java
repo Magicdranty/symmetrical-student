@@ -16,6 +16,8 @@ public class connectuse extends Application {
     private BufferedReader brt;
     private BufferedWriter bwt;
      String accountname,email;
+    public static int currentPosition;
+
     public  void init()
     {
         try {

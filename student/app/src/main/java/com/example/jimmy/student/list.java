@@ -54,6 +54,8 @@ public class list extends AppCompatActivity {
                     case R.id.navigation_item_5:
                         break;
                     case R.id.navigation_item_6:
+                        Intent it6 = new Intent(list.this, settings.class);
+                        startActivity(it6);
                         break;
                 }
                 return true;
