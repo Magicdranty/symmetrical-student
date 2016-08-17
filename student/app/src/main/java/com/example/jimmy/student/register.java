@@ -24,6 +24,7 @@ public class register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_register);
         acc = (EditText) findViewById(R.id.editText3);
         pwd = (EditText) findViewById(R.id.editText4);
